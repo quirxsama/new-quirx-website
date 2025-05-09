@@ -12,8 +12,8 @@ const Footer = () => {
     { name: t("footer.home"), href: "/" },
     { name: t("footer.about"), href: "/about" },
     { name: t("footer.projects"), href: "/projects" },
-    { name: t("footer.skills"), href: "/skills" },
-    { name: t("footer.contact"), href: "/contact" },
+    { name: t("footer.skills"), href: "/#skills" },
+    { name: t("footer.contact"), href: "/#contact" },
   ];
 
   return (
@@ -85,7 +85,7 @@ const Footer = () => {
               </p>
               <p className="text-sm text-gray-400">
                 <a href="tel:+905001234567" className="hover:text-blue-400 transition-colors">
-                  +90 (500) 123 45 67
+                  +90 (XXX) XXX-XXXX
                 </a>
               </p>
             </address>
@@ -94,7 +94,7 @@ const Footer = () => {
 
         <div className="mt-10 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-500">
-            &copy; {currentYear} QuirxKaan. {t("footer.rights")}.
+            &copy; {currentYear} QuirxKaan {t("footer.rights")}.
           </p>
           <div className="mt-4 md:mt-0 flex items-center text-sm text-gray-500">
             <span className="inline-flex items-center">

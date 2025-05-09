@@ -21,7 +21,7 @@ const translations = {
     "nav.resume": "Özgeçmiş",
     
     // Hero
-    "hero.greeting": "Merhaba, ben",
+    "hero.greeting": "Yazılım Mühendisi",
     "hero.name": "Merhaba, ben",
     "hero.title": "Full Stack Developer & UI/UX Designer",
     "hero.description": "Modern ve kullanıcı dostu web uygulamaları ile dijital çözümler sunuyorum. Kullanıcı deneyimini ön planda tutarak yenilikçi projeler geliştiriyorum.",
@@ -97,7 +97,7 @@ const translations = {
     "nav.resume": "Resume",
     
     // Hero
-    "hero.greeting": "Hello, I'm",
+    "hero.greeting": "Software Engineer",
     "hero.name": "Hello, I'm",
     "hero.title": "Full Stack Developer & UI/UX Designer",
     "hero.description": "I provide digital solutions with modern and user-friendly web applications. I develop innovative projects with a focus on user experience.",
