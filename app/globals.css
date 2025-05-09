@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 15, 30;
+  --background-end-rgb: 15, 23, 42;
+  
+  --primary-color: 59, 130, 246;
+  --secondary-color: 99, 102, 241;
+  --accent-color: 79, 70, 229;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-medium;
+  }
+  
+  a {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition-all shadow-md hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-600/10 rounded-md font-medium transition-all;
+  }
+  
+  .section {
+    @apply py-20 md:py-28;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card {
+    @apply bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-lg shadow-lg p-6;
+  }
+}
+
+/* Özel Scrollbar Stili */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Seçim Stili */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+} 
