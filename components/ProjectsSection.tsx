@@ -15,8 +15,8 @@ const ProjectsSection = () => {
       description: "Modern arayüzlü, tam kapsamlı e-ticaret çözümü. Next.js, Tailwind CSS ve Stripe entegrasyonu.",
       image: "https://placehold.co/800x400/3498db/FFFFFF/png?text=E-Ticaret+Platformu",
       tags: ["Next.js", "React", "Tailwind CSS", "Stripe", "MongoDB"],
-      githubUrl: "https://github.com/quirxkaan/ecommerce-platform",
-      liveUrl: "https://ecommerce-platform.vercel.app",
+      githubUrl: "https://github.com/quirxsama/ecommerce-platform",
+      liveUrl: "/#",
     },
     {
       id: 2,
@@ -24,8 +24,8 @@ const ProjectsSection = () => {
       description: "Kişisel ve kurumsal finansal yönetim sağlayan web uygulaması. Bütçe takibi, yatırım analizi ve raporlama özellikleri.",
       image: "https://placehold.co/800x400/27ae60/FFFFFF/png?text=Finans+Yonetim+Uygulamasi",
       tags: ["React", "TypeScript", "Chart.js", "Firebase", "Redux"],
-      githubUrl: "https://github.com/quirxkaan/finance-tracker",
-      liveUrl: "https://finance-tracker.vercel.app",
+      githubUrl: "https://github.com/quirxsama/finance-tracker",
+      liveUrl: "/#",
     },
     {
       id: 3,
@@ -33,8 +33,8 @@ const ProjectsSection = () => {
       description: "Yapay zeka ile içerik oluşturma ve düzenleme platformu. OpenAI API entegrasyonu ile otomatik içerik üretimi.",
       image: "https://placehold.co/800x400/9b59b6/FFFFFF/png?text=AI+Destekli+Icerik+Yonetimi",
       tags: ["Vue.js", "Node.js", "OpenAI", "Express", "PostgreSQL"],
-      githubUrl: "https://github.com/quirxkaan/ai-content-platform",
-      liveUrl: "https://ai-content-platform.vercel.app",
+      githubUrl: "https://github.com/quirxsama/ai-content-platform",
+      liveUrl: "/#",
     },
   ];
 
@@ -156,7 +156,7 @@ const ProjectsSection = () => {
         
         <div className="text-center mt-12">
           <a
-            href="https://github.com/quirxkaan"
+            href="https://github.com/quirxsama"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline inline-flex items-center"

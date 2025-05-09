@@ -88,7 +88,7 @@ const AboutSection = () => {
             <div className="relative w-full max-w-md mx-auto aspect-square rounded-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-transparent z-10"></div>
               <Image 
-                src="https://placehold.co/600x600/383838/FFFFFF/png?text=QuirxKaan" 
+                src="/images/profile.png" 
                 alt="QuirxKaan" 
                 layout="fill"
                 objectFit="cover"
@@ -134,7 +134,7 @@ const AboutSection = () => {
             </div>
             
             <div className="flex gap-4 mt-8">
-              <Link href="/contact" className="btn-primary">
+              <Link href="/#contact" className="btn-primary">
                 {t("about.hire_me")}
               </Link>
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline">

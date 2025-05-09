@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -75,7 +76,7 @@ const Hero = () => {
 
             <motion.div variants={itemVariants} className="mt-10 flex items-center space-x-6">
               <a 
-                href="https://github.com/quirxkaan" 
+                href="https://github.com/quirxsama" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -84,7 +85,7 @@ const Hero = () => {
                 <FaGithub className="w-6 h-6" />
               </a>
               <a 
-                href="https://linkedin.com/in/quirxkaan" 
+                href="https://www.linkedin.com/in/quirxkaan/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-500 transition-colors"
@@ -93,13 +94,31 @@ const Hero = () => {
                 <FaLinkedin className="w-6 h-6" />
               </a>
               <a 
-                href="https://twitter.com/quirxkaan" 
+                href="https://x.com/quirxkaan" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
                 aria-label="Twitter"
               >
                 <FaTwitter className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@QuirxKaan" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-500 transition-colors"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.instagram.com/quirx.kaan/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-6 h-6" />
               </a>
             </motion.div>
           </div>
@@ -109,10 +128,17 @@ const Hero = () => {
             className="hidden lg:block relative"
           >
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-slate-700/50 shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-800/50 to-transparent z-10"></div>
+              <Image
+                src="/images/hero-profile.jpg"
+                alt="Cat"
+                layout="fill"
+                objectFit="cover"
+                className="scale-105 blur-sm"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/90 via-slate-800/70 to-slate-800/40 z-10"></div>
               <div className="absolute inset-0 flex items-center justify-center z-20">
                 <div className="text-center p-6">
-                  <span className="text-7xl font-bold text-blue-500">Q</span>
+                  <span className="text-7xl font-bold text-blue-500">Kaan</span>
                   <p className="text-gray-300 mt-4">Full Stack Developer & UI/UX Designer</p>
                 </div>
               </div>

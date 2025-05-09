@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -29,7 +29,7 @@ const Footer = () => {
             </p>
             <div className="mt-6 flex items-center space-x-4">
               <a 
-                href="https://github.com/quirxkaan" 
+                href="https://github.com/quirxsama" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -38,7 +38,7 @@ const Footer = () => {
                 <FaGithub className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com/in/quirxkaan" 
+                href="https://www.linkedin.com/in/quirxkaan/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-500 transition-colors"
@@ -47,13 +47,31 @@ const Footer = () => {
                 <FaLinkedin className="w-5 h-5" />
               </a>
               <a 
-                href="https://twitter.com/quirxkaan" 
+                href="https://x.com/quirxkaan" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
                 aria-label="Twitter"
               >
                 <FaTwitter className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@QuirxKaan" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-500 transition-colors"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.instagram.com/quirx.kaan/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-5 h-5" />
               </a>
             </div>
           </div>

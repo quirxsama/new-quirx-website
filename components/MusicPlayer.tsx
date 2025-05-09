@@ -6,19 +6,49 @@ import { FaPlay, FaPause, FaForward, FaBackward, FaVolumeUp, FaVolumeMute, FaRan
 
 const songs = [
   {
-    title: "Gül Pembe",
+    title: "Gülpembe",
     artist: "Barış Manço",
     url: "/music/music1.mp3"
   },
   {
-    title: "Tot Musica",
-    artist: "Ado",
+    title: "drinks or cofee",
+    artist: "Rosé",
     url: "/music/music2.mp3"
   },
   {
-    title: "Fireworks",
-    artist: "Kenshi Yonezu",
+    title: "Die With A Smile",
+    artist: "Lady Gaga & Bruno Mars",
     url: "/music/music3.mp3"
+  },
+  {
+    title: "Vengeance",
+    artist: "BIBI",
+    url: "/music/music4.mp3"
+  },
+  {
+    title: "Dernière danse",
+    artist: "Indila",
+    url: "/music/music5.mp3"
+  },
+  {
+    title: "Je Veux",
+    artist: "Zaz",
+    url: "/music/music6.mp3"
+  },
+  {
+    title: "number one girl",
+    artist: "Rosé",
+    url: "/music/music7.mp3"
+  },
+  {
+    title: "That That",
+    artist: "PSY & SUGA",
+    url: "/music/music8.mp3"
+  },
+  {
+    title: "Superman",
+    artist: "Eminem & Dina Rae",
+    url: "/music/music9.mp3"
   }
 ];
 

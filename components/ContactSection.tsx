@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const ContactSection = () => {
   const { t } = useLanguage();
@@ -117,7 +117,7 @@ const ContactSection = () => {
               <h4 className="text-sm font-medium text-gray-300 mb-4">{t("contact.social")}</h4>
               <div className="flex items-center space-x-4">
                 <a 
-                  href="https://linkedin.com/in/quirxkaan" 
+                  href="https://www.linkedin.com/in/quirxkaan/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-slate-800 p-3 rounded-full text-gray-400 hover:text-blue-400 hover:bg-slate-700 transition-colors"
@@ -126,7 +126,7 @@ const ContactSection = () => {
                   <FaLinkedin className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://github.com/quirxkaan" 
+                  href="https://github.com/quirxsama" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-slate-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-slate-700 transition-colors"
@@ -135,13 +135,31 @@ const ContactSection = () => {
                   <FaGithub className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://twitter.com/quirxkaan" 
+                  href="https://x.com/quirxkaan" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-slate-800 p-3 rounded-full text-gray-400 hover:text-blue-400 hover:bg-slate-700 transition-colors"
                   aria-label="Twitter"
                 >
                   <FaTwitter className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.youtube.com/@QuirxKaan" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-slate-800 p-3 rounded-full text-gray-400 hover:text-red-500 hover:bg-slate-700 transition-colors"
+                  aria-label="YouTube"
+                >
+                  <FaYoutube className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/quirx.kaan/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-slate-800 p-3 rounded-full text-gray-400 hover:text-pink-500 hover:bg-slate-700 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram className="w-5 h-5" />
                 </a>
               </div>
             </div>
