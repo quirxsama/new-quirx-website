@@ -1,41 +1,42 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaInstagram, FaBluesky } from "react-icons/fa6";
 import Image from "next/image";
 
 const Hero = () => {
   const { t } = useLanguage();
+  const shouldReduceMotion = useReducedMotion();
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        duration: 0.5,
+        staggerChildren: shouldReduceMotion ? 0 : 0.2,
+        duration: shouldReduceMotion ? 0.3 : 0.5,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: shouldReduceMotion ? { opacity: 0 } : { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: shouldReduceMotion ? 0.3 : 0.5,
       },
     },
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section id="home" className="relative min-h-screen flex items-center pt-16 md:pt-20 px-4 sm:px-6 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 mix-blend-multiply" />
-        <div className="absolute h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-3xl -top-20 -left-40" />
-        <div className="absolute h-[500px] w-[500px] rounded-full bg-indigo-600/10 blur-3xl -bottom-20 -right-40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-indigo-600/5 mix-blend-multiply" />
+        <div className="absolute h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-blue-600/5 blur-2xl -top-20 -left-20 md:-left-40" />
+        <div className="absolute h-[300px] w-[300px] md:h-[500px] md:w-[500px] rounded-full bg-indigo-600/5 blur-2xl -bottom-20 -right-20 md:-right-40" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -119,6 +120,15 @@ const Hero = () => {
               >
                 <FaInstagram className="w-6 h-6" />
               </a>
+               <a
+                href="https://bsky.app/profile/quirxsama.bsky.social"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-500 transition-colors"
+                 aria-label="Bluesky"
+               >
+               <FaBluesky className="w-6 h-6" />
+              </a>
             </motion.div>
           </div>
 
@@ -130,9 +140,8 @@ const Hero = () => {
               <Image
                 src="/images/hero-profile.jpg"
                 alt="Cat"
-                layout="fill"
-                objectFit="cover"
-                className="scale-105 blur-sm"
+                fill
+                className="scale-105 blur-sm object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/90 via-slate-800/70 to-slate-800/40 z-10"></div>
               <div className="absolute inset-0 flex items-center justify-center z-20">

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaInstagram, FaYoutube, FaBluesky } from "react-icons/fa6";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -72,9 +72,18 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <FaInstagram className="w-5 h-5" />
-              </a>
+                </a>
+                <a
+                  href="https://bsky.app/profile/quirxsama.bsky.social"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-500 transition-colors"
+                  aria-label="Bluesky"
+                >
+                 <FaBluesky className="w-5 h-5" />
+                </a>
+              </div>
             </div>
-          </div>
 
           <div>
             <h3 className="text-base font-medium text-white mb-4">{t("footer.links")}</h3>

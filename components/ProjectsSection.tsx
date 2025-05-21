@@ -108,9 +108,8 @@ const ProjectsSection = () => {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="transition-transform duration-500 group-hover:scale-110 object-cover"
                 />
               </div>
               

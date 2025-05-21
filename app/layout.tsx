@@ -35,9 +35,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="scroll-smooth">
-      <body className={`${inter.className} ${poppins.variable} ${dancingScript.variable} bg-gradient-to-br from-gray-900 to-black text-white min-h-screen antialiased overflow-x-hidden w-full`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      </head>
+      <body className={`${inter.className} ${poppins.variable} ${dancingScript.variable} overflow-x-hidden w-full`}>
         <LanguageProvider>
-          <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none"></div>
+          {/* Gradient overlay */}
+          <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent pointer-events-none" />
+          
           <LanguageSwitch />
           <main className="relative z-10 w-full">
             {children}

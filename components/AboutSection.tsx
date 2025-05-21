@@ -90,9 +90,8 @@ const AboutSection = () => {
               <Image 
                 src="/images/profile.png" 
                 alt="QuirxKaan" 
-                layout="fill"
-                objectFit="cover"
-                className="z-0"
+                fill
+                className="z-0 object-cover"
               />
               <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-20 font-medium">
                 7+ {t("about.years_experience")}

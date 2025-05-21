@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram, FaBluesky } from "react-icons/fa6";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactSection = () => {
   const { t } = useLanguage();
@@ -28,14 +29,11 @@ const ContactSection = () => {
     setError("");
 
     try {
-      // Burada form verilerini gönderme işlemi yapılacak
-      // Örnek: await fetch('/api/contact', {method: 'POST', body: JSON.stringify(formData)})
-      
-      // Simüle edilmiş işlem
+
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSent(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (_err) { // Added underscore to indicate unused variable
+    } catch (_err) { 
       setError(t("contact.error"));
     } finally {
       setIsLoading(false);
@@ -49,8 +47,8 @@ const ContactSection = () => {
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
             {t("contact.title")}
@@ -73,13 +71,13 @@ const ContactSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-2 card"
+            className="md:col-span-1 lg:col-span-2 card"
           >
             <h3 className="text-xl font-semibold mb-6 text-blue-400">{t("contact.info")}</h3>
             
@@ -161,6 +159,15 @@ const ContactSection = () => {
                 >
                   <FaInstagram className="w-5 h-5" />
                 </a>
+                              <a
+                  href="https://bsky.app/profile/quirxsama.bsky.social"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-slate-800 p-3 rounded-full text-gray-400 hover:text-blue-500 hover:bg-slate-700 transition-colors"
+                  aria-label="Bluesky"
+                >
+                 <FaBluesky className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </motion.div>
@@ -168,9 +175,9 @@ const ContactSection = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-3 card"
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="md:col-span-2 lg:col-span-3 card"
           >
             <h3 className="text-xl font-semibold mb-6 text-blue-400">{t("contact.form_title")}</h3>
             
@@ -179,7 +186,7 @@ const ContactSection = () => {
                 <p className="text-blue-400 font-medium">{t("contact.success")}</p>
                 <button
                   onClick={() => setIsSent(false)}
-                  className="mt-4 text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                  className="mt-4 text-sm text-blue-400 hover:text-blue-300 transition-colors px-4 py-2 hover:bg-blue-600/30 rounded-md"
                 >
                   {t("contact.send_another")}
                 </button>
