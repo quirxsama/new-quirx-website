@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Dancing_Script } from "next/font/google";
 import "./globals.css";
-import MusicPlayer from "@/components/MusicPlayer";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { LanguageProvider } from "@/context/LanguageContext";
 
@@ -43,9 +42,8 @@ export default function RootLayout({
           <main className="relative z-10 w-full">
             {children}
           </main>
-          <MusicPlayer />
         </LanguageProvider>
       </body>
     </html>
   );
-} 
+}

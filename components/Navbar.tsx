@@ -2,12 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Navbar = () => {
-  const pathname = usePathname();
   const [activeItem, setActiveItem] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -157,4 +154,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

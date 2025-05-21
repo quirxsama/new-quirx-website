@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
@@ -150,4 +149,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

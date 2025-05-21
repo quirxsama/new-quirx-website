@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import AboutSection from "@/components/AboutSection";
 
@@ -11,4 +10,4 @@ export default function About() {
       <AboutSection />
     </main>
   );
-} 
+}

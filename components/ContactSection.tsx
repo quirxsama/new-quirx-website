@@ -35,7 +35,7 @@ const ContactSection = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSent(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (err) {
+    } catch (_err) { // Added underscore to indicate unused variable
       setError(t("contact.error"));
     } finally {
       setIsLoading(false);
@@ -276,4 +276,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection; 
+export default ContactSection;
