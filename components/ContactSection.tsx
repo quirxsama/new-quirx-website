@@ -28,12 +28,24 @@ const ContactSection = () => {
     setIsLoading(true);
     setError("");
 
-    try {
+// Formspree API endpoint buraya gelecek. Backend olmadan iletişim için.
 
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsSent(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch { 
+    try {
+      const response = await fetch("https://formspree.io/f/xwpojpbo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSent(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (err) { 
       setError(t("contact.error"));
     } finally {
       setIsLoading(false);
