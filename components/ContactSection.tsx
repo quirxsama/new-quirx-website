@@ -33,7 +33,7 @@ const ContactSection = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSent(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (_err) { 
+    } catch { 
       setError(t("contact.error"));
     } finally {
       setIsLoading(false);
