@@ -45,7 +45,7 @@ const ContactSection = () => {
       } else {
         throw new Error("Form submission failed");
       }
-    } catch (err) { 
+    } catch {
       setError(t("contact.error"));
     } finally {
       setIsLoading(false);
